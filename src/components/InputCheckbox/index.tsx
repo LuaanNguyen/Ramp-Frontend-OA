@@ -12,15 +12,17 @@ export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, dis
           "RampInputCheckbox--label-checked": checked,
           "RampInputCheckbox--label-disabled": disabled,
         })}
-      />
-      <input
-        id={inputId}
-        type="checkbox"
-        className="RampInputCheckbox--input"
-        checked={checked}
-        disabled={disabled}
-        onChange={() => onChange(!checked)}
-      />
+      >
+        {/*Since the CSS class for <input> is display:none, I wrapped the input tag into the label tag so that it works even though the real input doesn't display.*/}
+        <input
+          id={inputId}
+          type="checkbox"
+          className="RampInputCheckbox--input"
+          checked={checked}
+          disabled={disabled}
+          onChange={() => onChange(!checked)}
+        />
+      </label>
     </div>
   )
 }
