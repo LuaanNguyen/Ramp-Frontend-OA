@@ -7,11 +7,11 @@ import {
 import { PaginatedRequestParams, RequestByEmployeeParams, SetTransactionApprovalParams } from "./types"
 
 const timeout = getTimeout()
-const mockTimeout = 1 * timeout
+const mockTimeout = 0.01 * timeout //Make the Fake API loads faster
 
 export function fakeFetch<TData, TParams extends object = object>(
   endpoint: RegisteredEndpoints,
-  params?: TParams
+  params?: TParams //This is employee ID
 ): Promise<TData> {
   return new Promise((resolve, reject) => {
     mockApiLogger({
@@ -44,6 +44,7 @@ export function fakeFetch<TData, TParams extends object = object>(
 
         case "transactionsByEmployee":
           result = getTransactionsByEmployee(params as RequestByEmployeeParams) as unknown as TData
+          // result = getTransactionsPaginated(params as PaginatedRequestParams) as unknown as TData
 
           setTimeout(() => {
             mockApiLogger({ data: { endpoint, params, result } })

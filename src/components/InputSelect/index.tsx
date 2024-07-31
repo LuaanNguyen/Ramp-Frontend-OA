@@ -55,7 +55,7 @@ export function InputSelect<TItem>({
             <label className="RampText--s RampText--hushed" {...getLabelProps()}>
               {label}
             </label>
-            {/* <div className="RampBreak--xs" /> */}
+            <div className="RampBreak--xs" />
             <div
               className="RampInputSelect--input"
               onClick={(event) => {

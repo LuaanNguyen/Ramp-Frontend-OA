@@ -43,6 +43,8 @@ export function App() {
     }
   }, [employeeUtils.loading, employees, loadAllTransactions])
 
+  //console.log(transactions)
+
   return (
     <Fragment>
       <main className="MainContainer">
