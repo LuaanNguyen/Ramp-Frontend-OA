@@ -66,6 +66,7 @@ export function InputSelect<TItem>({
               {inputValue}
             </div>
 
+            {/*This is the dropdown*/}
             <div
               className={classNames("RampInputSelect--dropdown-container", {
                 "RampInputSelect--dropdown-container-opened": isOpen,
