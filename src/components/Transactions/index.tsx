@@ -24,15 +24,14 @@ export const Transactions: TransactionsComponent = ({ transactions }) => {
   return (
     <div data-testid="transaction-container">
       {transactions.map((transaction) => (
-        <>
+        <section key={transaction.id}>
           <div className="RampBreak--l" />
           <TransactionPane
-            key={transaction.id}
             transaction={transaction}
             loading={loading}
             setTransactionApproval={setTransactionApproval}
           />
-        </>
+        </section>
       ))}
     </div>
   )
