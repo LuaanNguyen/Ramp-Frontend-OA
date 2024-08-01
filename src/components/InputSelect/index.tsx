@@ -52,7 +52,7 @@ export function InputSelect<TItem>({
 
         return (
           <div className="RampInputSelect--root">
-            <label className="RampText--s RampText--hushed" {...getLabelProps()}>
+            <label className="RampText--l RampText--hushed" {...getLabelProps()}>
               {label}
             </label>
             <div className="RampBreak--xs" />
