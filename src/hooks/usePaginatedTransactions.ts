@@ -18,14 +18,6 @@ export function usePaginatedTransactions(): PaginatedTransactionsResult {
     )
 
     //clicking the "View More" button replaces the existing transactions with the new ones
-    // setPaginatedTransactions((previousResponse) => {
-    //   if (response === null || previousResponse === null) {
-    //     return response
-    //   }
-
-    //   return { data: response.data, nextPage: response.nextPage }
-    // })
-
     //Append new transactions when clicking view more
     setPaginatedTransactions((previousResponse) => {
       if (response === null) {
